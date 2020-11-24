@@ -31,8 +31,8 @@ public class User {
     }
 
     public String getInput(){
-        input = find.nextLine();
-        return input;
+        this.input = find.nextLine();
+        return this.input;
     }
 
 }

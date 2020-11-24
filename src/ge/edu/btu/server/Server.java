@@ -9,6 +9,8 @@ public class Server {
         ChatService chatService = new ChatServiceImpl();
         while (true) {
             Socket socket = serverSocket.accept();
+            SocketThread socketThread = new SocketThread(socket,chatService);
+            socketThread.start();
         }
     }
 }
